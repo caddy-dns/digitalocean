@@ -1,6 +1,6 @@
 # DigitalOcean module for Caddy
 
-> *WARNING:* untested!
+> _WARNING:_ untested!
 
 This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with DigitalOcean accounts.
 
@@ -31,13 +31,15 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 or with the Caddyfile:
 
 ```
-tls {
-	dns digitalocean {env.YOUR_DIGITALOCEAN_API_TOKEN}
+your.domain.com {
+	respond "Hello World"	# replace with whatever config you need...
+	tls {
+		dns digitalocean {env.YOUR_DIGITALOCEAN_API_TOKEN}
+	}
 }
 ```
 
 You can replace `{env.YOUR_DIGITALOCEAN_API_TOKEN}` with the actual auth token if you prefer to put it directly in your config instead of an environment variable.
-
 
 ## Authenticating
 
