@@ -1,7 +1,5 @@
 # DigitalOcean module for Caddy
 
-> _WARNING:_ untested!
-
 This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with DigitalOcean accounts.
 
 ## Caddy module name
