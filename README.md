@@ -18,8 +18,8 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
   "challenges": {
     "dns": {
       "provider": {
-	"name": "digitalocean",
-	"api_token": "YOUR_DIGITALOCEAN_API_TOKEN"
+        "name": "digitalocean",
+        "api_token": "YOUR_DIGITALOCEAN_API_TOKEN"
       }
     }
   }
