@@ -12,14 +12,14 @@ dns.providers.digitalocean
 
 To use this module for the ACME DNS challenge, [configure the ACME issuer in your Caddy JSON](https://caddyserver.com/docs/json/apps/tls/automation/policies/issuer/acme/) like so:
 
-```
+```json
 {
 	"module": "acme",
 	"challenges": {
 		"dns": {
 			"provider": {
 				"name": "digitalocean",
-				"api_token": "YOUR_DIGITALOCEAN_API_TOKEN"
+				"api_token": "{env.YOUR_DIGITALOCEAN_API_TOKEN}"
 			}
 		}
 	}
