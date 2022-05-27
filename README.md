@@ -44,3 +44,14 @@ You can replace `{env.YOUR_DIGITALOCEAN_API_TOKEN}` with the actual auth token i
 See [the associated README in the libdns package](https://github.com/libdns/digitalocean) for important information about credentials.
 
 **NOTE**: If migrating from Caddy v1, you will need to change from using a DigitalOcean API Key to a scoped API Token. Please see link above for more information.
+
+## Building caddy with this module
+
+install [xcaddy](https://github.com/caddyserver/xcaddy): `go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest`
+
+Then build caddy:
+
+```
+xcaddy build \
+    --with github.com/caddy-dns/digitalocean@master
+```
