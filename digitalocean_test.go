@@ -103,7 +103,7 @@ func TestUnmarshalCaddyfile(t *testing.T) {
 		{
 			name:        "token as arg with extra arg",
 			input:       "digitalocean mytoken extraarg",
-			expectedErr: "Wrong argument count or unexpected line ending after 'extraarg'",
+			expectedErr: "wrong argument count or unexpected line ending after 'extraarg'",
 		},
 		{
 			name:        "api_token in block with extra arg",
