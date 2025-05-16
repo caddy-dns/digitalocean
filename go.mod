@@ -9,6 +9,8 @@ require (
 	github.com/libdns/digitalocean v0.0.0-20220518195853-a541bc8aa80f
 )
 
+replace github.com/libdns/digitalocean => github.com/joaodubas/libdns-digitalocean v0.0.0-20250515200431-0bbdc29dc258
+
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/caddyserver/certmagic v0.23.0 // indirect
