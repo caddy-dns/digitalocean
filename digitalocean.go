@@ -31,10 +31,9 @@ func (p *Provider) Provision(ctx caddy.Context) error {
 
 // UnmarshalCaddyfile sets up the DNS provider from Caddyfile tokens. Syntax:
 //
-// digitalocean [<api_token>] {
-//     api_token <api_token>
-// }
-//
+//	digitalocean [<api_token>] {
+//	    api_token <api_token>
+//	}
 func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	for d.Next() {
 		if d.NextArg() {
@@ -48,9 +47,9 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 			case "api_token":
 				if p.Provider.APIToken != "" {
 					return d.Err("API token already set")
-				}
-				p.Provider.APIToken = d.Val()
-				if d.NextArg() {
+				} else if d.NextArg() {
+					p.Provider.APIToken = d.Val()
+				} else {
 					return d.ArgErr()
 				}
 			default:
