@@ -9,6 +9,7 @@ require (
 	github.com/libdns/digitalocean v0.0.0-20220518195853-a541bc8aa80f
 )
 
+// TODO: (jpd) remove this replace once `github.com/libdns/digitalocean` is updated
 replace github.com/libdns/digitalocean => github.com/joaodubas/libdns-digitalocean v0.0.0-20250515200431-0bbdc29dc258
 
 require (
